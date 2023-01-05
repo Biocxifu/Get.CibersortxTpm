@@ -15,6 +15,7 @@ devtools::install_github('BioCheng/Get.CibersortxTpm')
 ### Load example data
 ```
 library(SeuratData)
+library(Get.CibersortxTpm)
 data("pbmc3k")
 pbmc3k <- pbmc3k[,1:100]
 ```
