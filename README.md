@@ -1,4 +1,3 @@
-[![ForgiveDB](https://img.shields.io/badge/dp-HuiZ-brightgreen.svg)](https://github.com/hui-z/ForgiveDB)
 # Get.CibersortxTpm
 
 **Get the single-cell sequencing TPM matrix required by CIBERSORTX**
