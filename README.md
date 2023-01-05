@@ -1,15 +1,30 @@
 # Get.CibersortxTpm
+
 **Get the single-cell sequencing TPM matrix required by CIBERSORTX**
 
-## Install
-`devtools::install_github('dviraran/SingleR')` 
+The R package can extract the counts matrix in the seuart object to calculate the TPM value and match the corresponding cell name. It supports multi-core computation to speed up computation runs, and the resulting output file can be directly input into CIBERSORTX to create a signature matrix
 
-## Usage
 ## Install
-devtools::install_github('dviraran/SingleR')
- 
-data(pbmc3K)
-Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = seuart_object,celltype_varname = 'seurat_annotations',
-                   select_allcells = F,specified_cells = c('Naive CD4 T','Memory CD4 T','B'),
-                   gsub_cellname = T,gsub_string = c(' ','_'),write_filename = 'test.txt')
-`
+```
+devtools::install_github('BioCheng/Get.CibersortxTpm')
+```  
+## Usage
+
+###### Load example data
+```
+library(SeuratData)
+data("pbmc3k")
+```
+###### Start running
+```
+Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = seuart_object,select_allcells = F,
+                                     celltype_varname = 'seurat_annotations',
+                                     specified_cells = c('Naive CD4 T','Memory CD4 T','B'),
+                                     gsub_cellname = T,gsub_string = c(' ','_'),
+                                     write_filename = 'test.txt')
+
+```
+
+CIBERSORTX:
+[Build a Signature Matrix File from Single-Cell RNA Sequencing Data](https://cibersortx.stanford.edu/tutorial.php)    
+
