@@ -10,21 +10,32 @@ devtools::install_github('BioCheng/Get.CibersortxTpm')
 ```  
 ## Usage
 
-###### Load example data
+#### Load example data
 ```
 library(SeuratData)
 data("pbmc3k")
 pbmc3k <- pbmc3k[,1:100]
 ```
-###### Start running
+
+#### Start running
+##### You can all cells
 ```
-Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = pbmc3k, select_allcells = F,
+Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = pbmc3k, select_allcells = FALSE,
                                      celltype_varname = 'seurat_annotations',
                                      specified_cells = c('Naive CD4 T','Memory CD4 T','B'),
                                      gsub_cellname = T,gsub_string = c(' ','_'),
                                      write_filename = 'test.txt')
 
 ```
+
+##### Or you can select specific cells
+```
+Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = seuart_object,select_allcells =TRUE,
+                                     celltype_varname = 'seurat_annotations',
+                                     gsub_cellname = T,gsub_string = c(' ','_'),
+                                     write_filename = 'test.txt')
+```
+
 
 CIBERSORTX:
 [Build a Signature Matrix File from Single-Cell RNA Sequencing Data](https://cibersortx.stanford.edu/tutorial.php)    
