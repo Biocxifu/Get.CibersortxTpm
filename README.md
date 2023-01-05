@@ -1,3 +1,4 @@
+[![ForgiveDB](https://img.shields.io/badge/dp-HuiZ-brightgreen.svg)](https://github.com/hui-z/ForgiveDB)
 # Get.CibersortxTpm
 
 **Get the single-cell sequencing TPM matrix required by CIBERSORTX**
@@ -29,12 +30,13 @@ Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = pbmc3k, select_allcells = F
 ```
 
 ##### *Or you can select specific cells*
-```css
+```
 Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = seuart_object,select_allcells =TRUE,
                                      celltype_varname = 'seurat_annotations',
                                      gsub_cellname = T,gsub_string = c(' ','_'),
                                      write_filename = 'test.txt')
 ```
+
 
 
 CIBERSORTX:
