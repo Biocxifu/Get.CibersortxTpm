@@ -55,7 +55,7 @@ Get.CibersortxTpm <-
 
     #Output the TPM-like matrix file
     if (!(is_null(write_filename))){
-      fwrite(tpm.like,file =write_filename,sep = seq,row.names =row.names ,col.names =col.names )
+      fwrite(tpm.like,file =write_filename,sep = sep,row.names =row.names ,col.names =col.names )
     }
 
     return(tpm.like)
