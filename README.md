@@ -1,3 +1,5 @@
+#### require
+[![ForgiveDB](https://img.shields.io/badge/CRAN-pbapply-brightgreen.svg)](https://cran.r-project.org/web/packages/pbapply/) [![ForgiveDB](https://img.shields.io/badge/CRAN-Seurat-brightgreen.svg)](https://cran.r-project.org/web/packages/Seurat/index.html)  [![ForgiveDB](https://img.shields.io/badge/CRAN-SeuratObject-brightgreen.svg)](https://cran.r-project.org/web/packages/SeuratObject/index.html)   [![ForgiveDB](https://img.shields.io/badge/CRAN-tidyverse-brightgreen.svg)](https://cran.r-project.org/web/packages/tidyverse/)
 # Get.CibersortxTpm
 
 **Get the single-cell sequencing TPM matrix required by CIBERSORTX**
