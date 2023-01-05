@@ -1,6 +1,7 @@
 suppressMessages(library(tidyverse))
 suppressMessages(library(pbapply))
 suppressMessages(library(SeuratObject))
+suppressMessages(library(data.table))
 #' Title
 #'
 #' @param seuart_object seuart object
@@ -21,10 +22,10 @@ suppressMessages(library(SeuratObject))
 #' @examples
 Get.CibersortxTpm <-
   function(seuart_object=seuart_object, celltype_varname=celltype_varname,
-           select_allcells=F, gsub_cellname=F,
+           select_allcells=FALSE, gsub_cellname=FALSE,
            specified_cells=specified_cells,cl=1,
            write_filename=NULL, gsub_string=gsub_string,
-           sep = '\t',row.names =F ,col.names =T){
+           sep = '\t',row.names =FALSE ,col.names =TRUE){
     #Get meta data
     meta <- seuart_object@meta.data
     counts=as.data.frame(GetAssayData(seuart_object, assay = "RNA", slot = "counts"))
