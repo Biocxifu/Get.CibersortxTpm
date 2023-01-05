@@ -14,10 +14,11 @@ devtools::install_github('BioCheng/Get.CibersortxTpm')
 ```
 library(SeuratData)
 data("pbmc3k")
+pbmc3k <- pbmc3k[,1:100]
 ```
 ###### Start running
 ```
-Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = seuart_object,select_allcells = F,
+Cibersortx_Tpm <- Get_Cibersortx_Tpm(seuart_object = pbmc3k, select_allcells = F,
                                      celltype_varname = 'seurat_annotations',
                                      specified_cells = c('Naive CD4 T','Memory CD4 T','B'),
                                      gsub_cellname = T,gsub_string = c(' ','_'),
