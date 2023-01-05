@@ -2,7 +2,7 @@
 
 **Get the single-cell sequencing TPM matrix required by CIBERSORTX**
 
-The R package can extract the counts matrix in the seuart object to calculate the TPM value and match the corresponding cell name. It supports multi-core computation to speed up computation runs, and the resulting output file can be directly input into CIBERSORTX to create a signature matrix
+The R package can extract the counts matrix in the seuart object to calculate the TPM value and match the corresponding cell name. It supports multi-core computation to speed up computation runs, and the resulting output file can be directly input into CIBERSORTX to create a Signature Matrix
 
 ## Install
 ```
