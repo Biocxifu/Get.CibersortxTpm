@@ -4,8 +4,8 @@ suppressMessages(library(SeuratObject))
 suppressMessages(library(data.table))
 #' Title
 #'
-#' @param seuart_object seuart object
-#' @param celltype_varname The name of the variable in the seuart object that represents the cell type
+#' @param seurat_object seurat object
+#' @param celltype_varname The name of the variable in the seurat object that represents the cell type
 #' @param select_allcells Whether to select all cell types,default is FALSE
 #' @param gsub_cellname Whether to replace useless strings in cell names,default is FALSE
 #' @param specified_cells The specified cell type names
@@ -21,14 +21,14 @@ suppressMessages(library(data.table))
 #'
 #' @examples
 Get.CibersortxTpm <-
-  function(seuart_object=seuart_object, celltype_varname=celltype_varname,
+  function(seurat_object=seurat_object, celltype_varname=celltype_varname,
            select_allcells=FALSE, gsub_cellname=FALSE,
            specified_cells=specified_cells,cl=1,
            write_filename=NULL, gsub_string=gsub_string,
            sep = '\t',row.names =FALSE ,col.names =TRUE){
     #Get meta data
-    meta <- seuart_object@meta.data
-    counts=as.data.frame(GetAssayData(seuart_object, assay = "RNA", slot = "counts"))
+    meta <- seurat_object@meta.data
+    counts=as.data.frame(GetAssayData(seurat_object, assay = "RNA", slot = "counts"))
 
     #Start calculating the TPM
     if (select_allcells==T) {
