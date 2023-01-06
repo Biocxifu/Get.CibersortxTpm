@@ -23,7 +23,7 @@ pbmc3k <- pbmc3k[,1:100]
 ### Start running
 ##### *You can select all cells*
 ```
-Cibersortx_Tpm <- Get.CibersortxTpm(seurat_object = seurat_object,select_allcells =TRUE,
+Cibersortx_Tpm <- Get.CibersortxTpm(seurat_object = pbmc3k,select_allcells =TRUE,
                                     celltype_varname = 'seurat_annotations',
                                     gsub_cellname = T,gsub_string = c(' ','_'),
                                     write_filename = 'test.txt')
