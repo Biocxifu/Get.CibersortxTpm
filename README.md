@@ -8,7 +8,7 @@ The R package can extract the counts matrix in the seurat object to calculate th
 
 ## Install
 ```
-devtools::install_github('BioCheng/Get.CibersortxTpm')
+devtools::install_github('Biocxifu/Get.CibersortxTpm')
 ```  
 ## Usage
 
